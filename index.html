@@ -142,7 +142,10 @@
                                 <img src="${post.image}.jpg">
                             </div>
                             <p>${post.subtitle}</p>
-                            <a href="/" title="${post.title}" class="learn-more" target="_blank"><button>Find out more</button></a>
+                            <a href="/" title="${post.title}" 
+                            onclick="dataLayer.push({
+                                'link_title': '${post.title}'
+                            });" class="learn-more" target="_blank"><button>Find out more</button></a>
                         </div>`
             })
             feed.innerHTML = html;
