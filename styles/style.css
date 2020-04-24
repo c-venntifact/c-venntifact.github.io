@@ -76,7 +76,7 @@ p {
     align-items: stretch;
 }
 .post {
-    border: 1px solid black;
+    border: 2px solid #dadada;
     margin:15px;
     flex: 1;
     min-width:300px;
