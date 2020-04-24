@@ -142,7 +142,7 @@
                                 <img src="${post.image}.jpg">
                             </div>
                             <p>${post.subtitle}</p>
-                            <a href="/" target="_blank"><button>Find out more</button></a>
+                            <a href="/" title="${post.title}" class="learn-more" target="_blank"><button>Find out more</button></a>
                         </div>`
             })
             feed.innerHTML = html;
