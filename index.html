@@ -51,16 +51,102 @@
                 <h2>The Future-Focused UTS campus</h2>
                 <p>The UTS campus has been reimagined to support new opportunities for learning, teaching and high-impact research.</p>
                 <p>Discover our transforming campus that is connecting students, indsutry and the community</p>
-                <div class="feature-post-link"><a href="/">Discover More</a></div>
+                <a href="/"><div class="feature-post-link"><button>Discover More</button></div></a>
             </div>
         
         </div>
-        
+        <div id="feed">
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+            <div class="post">
+                <h2>Post title</h2>
+                <div class="img-wrap">
+                    <img src="images/building2.jpg">
+                </div>
+                <p>Coronavirus advice and frequently asked questions</p>
+            </div>
+        </div>
     </div>
-    
-
-<h1>
-    Hello World
-</h1>
+    <script>
+        let feed = document.querySelector("#feed");
+        let posts = [{
+            title: "Coronavirus update",
+            image: "images/post1",
+            subtitle: "Coronavirus advice and frequently asked questions"
+        }, 
+        {
+            title: "Unlock your alumni benefits",
+            image: "images/post2",
+            subtitle: "From career services to exclusive events, networking opportunities and more."
+        },
+        {
+            title: "UTS Startups",
+            image: "images/post3",
+            subtitle: "Join us for inspiration, support, or to get started!"
+        },
+        {
+            title: "UTS Online Events",
+            image: "images/post4",
+            subtitle: "Find out whats going on at UTS today!"
+        }, 
+        {
+            title: "Championing women in higher education",
+            image: "images/post5",
+            subtitle: "UTS named as the Workplace Gender Equality Agency's 'Employer of Choice for Gener Equality'."
+        },
+        {
+            title: "Inspiring initiatives light to way for women at work",
+            image: "images/post6",
+            subtitle: "UTS research report identifies innovative workplace programs that improve gender diversity."
+        }];
+        populate(feed, posts);
+        function populate(feed, posts) {
+            let html = "";
+            posts.forEach((post) => {
+                html += `<div class="post">
+                            <h2>${post.title}</h2>
+                            <div class="img-wrap">
+                                <img src="${post.image}.jpg">
+                            </div>
+                            <p>${post.subtitle}</p>
+                            <a href="/" target="_blank"><button>Find out more</button></a>
+                        </div>`
+            })
+            feed.innerHTML = html;
+        }
+    </script>
 </body>
 </html>
