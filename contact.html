@@ -65,6 +65,7 @@
         form.addEventListener('submit', handleFormSubmit);
         
         function handleFormSubmit(e) {
+            e.preventDefault();
             const name = this.querySelector('#name').value;
             const email = this.querySelector("#email").value;
             const message = this.querySelector('#message').value;
