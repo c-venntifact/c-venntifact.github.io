@@ -65,6 +65,8 @@
         form.addEventListener('submit', handleFormSubmit);
         
         function handleFormSubmit(e) {
+            e.preventDefault();
+            dataLayer.push({'event' : 'gtm.formSubmit'});
             const name = this.querySelector('#name').value;
             const email = this.querySelector("#email").value;
             const message = this.querySelector('#message').value;
